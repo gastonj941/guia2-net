@@ -29,6 +29,10 @@ namespace ConsoleApp1.Clases
 
         public void AgregarLibro(Libro libro)
         {
+            if(Libros == null)
+            {
+                Libros= new List<Libro>();
+            }
             Libros.Add(libro);
         }
 

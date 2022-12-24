@@ -27,15 +27,20 @@ namespace ConsoleApp1.Clases
             Encendido = false;
             Velocidad = 0;
             Capacidad = capacidad;
+            Mascota = null;
+            Pasajeros= new List<Persona>();
         }
-        public Auto(string marca, string modelo, string color, Persona conductor)
+        public Auto(string marca, string modelo, string color, int capacidad, Persona conductor)
         {
             Marca = marca;
             Modelo = modelo;
             Color = color;
+            Capacidad = capacidad;
             Encendido = false;
             Velocidad = 0;
             Conductor = conductor;
+            Mascota = null;
+            Pasajeros= new List<Persona>();
         }
 
         public void Encender()
@@ -57,19 +62,25 @@ namespace ConsoleApp1.Clases
 
         public void Acelerar()
         {
-            if (Encendido && (Velocidad + 10) > 100)
+            if (Encendido)
             {
-                Velocidad = 100;
+                if ((Velocidad + 10) > 100){
+                    Velocidad = 100;
+                }
+                else
+                {
+                    Velocidad += 10;
+                }
             }
             else
             {
-                Velocidad += 10;
+                Console.WriteLine("El auto no está encendido");
             }
         }
 
         public void Frenar()
         {
-            if ((Velocidad - 10) < 0)
+            if ((Velocidad - 20) < 0)
             {
                 Velocidad = 0;
             }
@@ -90,7 +101,7 @@ namespace ConsoleApp1.Clases
         public bool HayLugar()
         {
             int lugaresDisponibles = Pasajeros.Count - Capacidad;
-            if (Mascota.Tamaño == "grande")
+            if (Mascota!=null && Mascota.Tamaño == "grande")
             {
                 lugaresDisponibles-=1;
             }
@@ -159,13 +170,20 @@ namespace ConsoleApp1.Clases
 
         public void BajarMascotaGrande()
         {
-            if (Mascota.Tamaño == "grande")
+            if (Mascota != null)
             {
-                Mascota = null;
+                if (Mascota.Tamaño == "grande")
+                {
+                    Mascota = null;
+                }
+                else
+                {
+                    Console.WriteLine("No es una mascota grande");
+                }
             }
             else
             {
-                Console.WriteLine("No es una mascota grande");
+                Console.WriteLine("No hay ninguna mascota en el auto");
             }
         }
 
@@ -191,25 +209,39 @@ namespace ConsoleApp1.Clases
 
         public void CambiarRegazoMascota(Persona pasajero)
         {
-            if (Mascota.Tamaño == "pequeño")
+            if(Mascota != null)
             {
-                Mascota.Regazo = pasajero;
+                if (Mascota.Tamaño == "pequeño")
+                {
+                    Mascota.Regazo = pasajero;
+                }
+                else
+                {
+                    Console.WriteLine("No es una mascota pequeña");
+                }
             }
             else
             {
-                Console.WriteLine("No es una mascota pequeña");
+                Console.WriteLine("No hay ninguna mascota en el auto");
             }
         }
 
         public void ConocerRegazo()
         {
-            if (Mascota.Regazo != null)
+            if (Mascota != null)
             {
-                Console.WriteLine("La mascota va en el regazo de "+ Mascota.Regazo.NombreCompleto());
+                if (Mascota.Regazo != null)
+                {
+                    Console.WriteLine("La mascota va en el regazo de "+ Mascota.Regazo.NombreCompleto());
+                }
+                else
+                {
+                    Console.WriteLine("No hay mascotas en el regazo de nadie");
+                }
             }
             else
             {
-                Console.WriteLine("No hay mascotas en el regazo de nadie");
+                Console.WriteLine("No ninguna mascota en el auto");
             }
         }
     }

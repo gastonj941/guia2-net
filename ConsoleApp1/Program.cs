@@ -109,11 +109,38 @@ internal class Program
         Console.WriteLine(unaPersona.CalcularEdad());
         #endregion
 
+        #region smartphone
+        Smartphone celular = new Smartphone("Samsung", "A52");
+        celular.PrenderApagar();
+        celular.Silencio();
+        Console.WriteLine("Volumen: " + celular.Volumen);
+        celular.SubirVolumen();
+        Console.WriteLine("Volumen: " + celular.Volumen);
+        celular.BajarBrillo();
+        Console.WriteLine("Brillo: " + celular.Brillo);
+
+        #endregion
+
         #region clase auto
         Auto unAuto = new Auto("Ford", "Ranger", "Negro",5);
-        Console.WriteLine(unAuto.Encendido);
         unAuto.Encender();
-        Console.WriteLine(unAuto.Encendido);
+        unAuto.Conductor = unaPersona;
+        unAuto.Acelerar();
+        Console.WriteLine(unAuto.Velocidad);
+        unAuto.Encender();
+        unAuto.Acelerar();
+        Console.WriteLine(unAuto.Velocidad);
+        unAuto.Frenar();
+        Console.WriteLine(unAuto.Velocidad);
+        Mascota perro = new Mascota("Firulais", "perro", "grande");
+        Mascota gato = new Mascota("Michi", "gato", "pequeño");
+        perro.Correr();
+        Console.WriteLine("Energia perro: " + perro.Energia);
+        perro.Alimentar();
+        Console.WriteLine("Energia perro: " + perro.Energia);
+        unAuto.ConocerRegazo();
+        unAuto.HayLugar();
+        unAuto.SubirPasajero(unaPersona);
         #endregion
 
         #region clase estudiante
@@ -128,6 +155,10 @@ internal class Program
         Estudiante estudiante1 = new Estudiante("Hector", "Hernandez", fecha, listaLibros);
         Console.WriteLine(estudiante1.CantidadLibrosSinLeer());
         Console.WriteLine(estudiante1.PaginasLeidas());
+        Libro libro5 = new Libro("el libro5", autor1, 70);
+        estudiante1.AgregarLibro(libro5);
+        libro5.WasRead= true;
+        estudiante1.QuitarLibro(libro3);
         estudiante1.Leidos().ForEach(l => Console.WriteLine(l.Nombre));
         #endregion
     }
