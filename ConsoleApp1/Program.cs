@@ -5,96 +5,96 @@ internal class Program
     private static void Main(string[] args)
     {
         #region clase guia
-        //Guia nuevaguia = new Guia();
+        Guia nuevaguia = new Guia();
 
-        ////ejercicio1
-        //Console.WriteLine(nuevaguia.MayorQue100(101));
+        //ejercicio1
+        Console.WriteLine(nuevaguia.MayorQue100(101));
 
-        ////ejercicio2
-        //Console.WriteLine("Ingresar numero:");
-        //var option = Console.ReadLine();
-        //int num;
-        //Int32.TryParse(option, out num);
-        //if (nuevaguia.EsPar(num))
-        //{
-        //    Console.WriteLine("Es par");
-        //}
-        //else
-        //{
-        //    Console.WriteLine("No es par. Es impar");
-        //}
-        ////ejercicio3
-        //Console.WriteLine(nuevaguia.DobleDeImpar(14));
+        //ejercicio2
+        Console.WriteLine("Ingresar numero:");
+        var option = Console.ReadLine();
+        int num;
+        Int32.TryParse(option, out num);
+        if (nuevaguia.EsPar(num))
+        {
+            Console.WriteLine("Es par");
+        }
+        else
+        {
+            Console.WriteLine("No es par. Es impar");
+        }
+        //ejercicio3
+        Console.WriteLine(nuevaguia.DobleDeImpar(14));
 
-        ////ejercicio4
-        //Console.WriteLine(nuevaguia.Romanos(7));
+        //ejercicio4
+        Console.WriteLine(nuevaguia.Romanos(7));
 
-        ////ejercicio5
-        //Console.WriteLine("Ingresar nombre de la persona 1:");
-        //var nombre1 = Console.ReadLine();
-        //Console.WriteLine("Ingresar edad de la persona 1:");
-        //var edad1 = Console.ReadLine();
-        //Console.WriteLine("Ingresar nombre de la persona 2:");
-        //var nombre2 = Console.ReadLine();
-        //Console.WriteLine("Ingresar edad de la persona 2:");
-        //var edad2 = Console.ReadLine();
+        //ejercicio5
+        Console.WriteLine("Ingresar nombre de la persona 1:");
+        var nombre1 = Console.ReadLine();
+        Console.WriteLine("Ingresar edad de la persona 1:");
+        var edad1 = Console.ReadLine();
+        Console.WriteLine("Ingresar nombre de la persona 2:");
+        var nombre2 = Console.ReadLine();
+        Console.WriteLine("Ingresar edad de la persona 2:");
+        var edad2 = Console.ReadLine();
 
-        //int num1, num2;
+        int num1, num2;
 
-        //Int32.TryParse(edad1, out num1);
-        //Int32.TryParse(edad2, out num2);
+        Int32.TryParse(edad1, out num1);
+        Int32.TryParse(edad2, out num2);
 
-        //Console.WriteLine(nuevaguia.DiferenciaEdad(nombre1, num1, nombre2, num2));
+        Console.WriteLine(nuevaguia.DiferenciaEdad(nombre1, num1, nombre2, num2));
 
-        ////ejercicio6
-        //Console.WriteLine("Ingresar longitud del lado 1:");
-        //var longitud1 = Console.ReadLine();
-        //Console.WriteLine("Ingresar longitud del lado 2:");
-        //var longitud2 = Console.ReadLine();
-        //Console.WriteLine("Ingresar longitud del lado 3:");
-        //var longitud3 = Console.ReadLine();
+        //ejercicio6
+        Console.WriteLine("Ingresar longitud del lado 1:");
+        var longitud1 = Console.ReadLine();
+        Console.WriteLine("Ingresar longitud del lado 2:");
+        var longitud2 = Console.ReadLine();
+        Console.WriteLine("Ingresar longitud del lado 3:");
+        var longitud3 = Console.ReadLine();
 
-        //int lado1, lado2, lado3;
+        int lado1, lado2, lado3;
 
-        //Int32.TryParse(longitud1, out lado1);
-        //Int32.TryParse(longitud2, out lado2);
-        //Int32.TryParse(longitud3, out lado3);
+        Int32.TryParse(longitud1, out lado1);
+        Int32.TryParse(longitud2, out lado2);
+        Int32.TryParse(longitud3, out lado3);
 
-        //Console.WriteLine(nuevaguia.ClasificacionTriangulo(lado1, lado2, lado3));
-        //Console.WriteLine($"El perimetro del triangulo es: {nuevaguia.PerimetroTriangulo(lado1, lado2, lado3)}");
-        //Console.WriteLine("El area del triangulo es: {0:N2}", nuevaguia.AreaTriangulo(lado1, lado2, lado3));
-        ////Console.WriteLine(nuevaguia.PerimetroTriangulo(lado1, lado2, lado3));
-        ////Console.WriteLine(nuevaguia.AreaTriangulo(lado1, lado2, lado3));
+        Console.WriteLine(nuevaguia.ClasificacionTriangulo(lado1, lado2, lado3));
+        Console.WriteLine($"El perimetro del triangulo es: {nuevaguia.PerimetroTriangulo(lado1, lado2, lado3)}");
+        Console.WriteLine("El area del triangulo es: {0:N2}", nuevaguia.AreaTriangulo(lado1, lado2, lado3));
+        //Console.WriteLine(nuevaguia.PerimetroTriangulo(lado1, lado2, lado3));
+        //Console.WriteLine(nuevaguia.AreaTriangulo(lado1, lado2, lado3));
 
-        ////ejercicio7
-        //Console.WriteLine(nuevaguia.Desglose(1723));
+        //ejercicio7
+        Console.WriteLine(nuevaguia.Desglose(1723));
 
-        ////ejercicio8
-        //Console.WriteLine("Ingresar N:");
-        //option = Console.ReadLine();
-        //Int32.TryParse(option, out num);
-        //Console.WriteLine(nuevaguia.UnoAN(num));
+        //ejercicio8
+        Console.WriteLine("Ingresar N:");
+        option = Console.ReadLine();
+        Int32.TryParse(option, out num);
+        Console.WriteLine(nuevaguia.UnoAN(num));
 
-        ////ejercicio9
-        //nuevaguia.Suma15Numeros();
+        //ejercicio9
+        nuevaguia.Suma15Numeros();
 
-        ////ejercicio10
-        //nuevaguia.MultiploDeTres();
+        //ejercicio10
+        nuevaguia.MultiploDeTres();
 
-        ////ejercicio11
-        //nuevaguia.Password();
+        //ejercicio11
+        nuevaguia.Password();
 
-        ////ejercicio12
-        //nuevaguia.PasswordTresIntentos();
+        //ejercicio12
+        nuevaguia.PasswordTresIntentos();
 
-        ////ejercicios13
-        //nuevaguia.Adivinanza();
+        //ejercicios13
+        nuevaguia.Adivinanza();
 
-        ////ejercicio14
-        //nuevaguia.AdivinanzaConPista();
+        //ejercicio14
+        nuevaguia.AdivinanzaConPista();
 
-        ////ejercicio15
-        //nuevaguia.SumaNNumeros();
+        //ejercicio15
+        nuevaguia.SumaNNumeros();
         #endregion
 
         #region clase cuadrado
@@ -140,7 +140,9 @@ internal class Program
         Console.WriteLine("Energia perro: " + perro.Energia);
         unAuto.ConocerRegazo();
         unAuto.HayLugar();
-        unAuto.SubirPasajero(unaPersona);
+        Persona unPasajero = new Persona("Julian", "Perez", fecha);
+        unAuto.SubirPasajero(unPasajero);
+
         #endregion
 
         #region clase estudiante
